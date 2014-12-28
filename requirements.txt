@@ -1,0 +1,13 @@
+# Python Package Requirements File
+# More info: http://pypi.python.org/pypi/pip
+
+# From the PyPi repository
+# Example: ``pip install Django``
+
+lxml
+requests
+
+# From version control repositories
+# Example: ``pip install -e git+URL#egg=NAME``
+
+# ...
