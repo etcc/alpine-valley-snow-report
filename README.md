@@ -6,6 +6,8 @@ A python script to pull snow report data from alpinevalleyresort.com
 Example DEBUG output (otherwise returns a dictionary with all the same data):
 
 ```
+$ python snow_report.py
+
 ###
 # Alpine Valley Ski Report Snow Report
 ###
