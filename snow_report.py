@@ -29,6 +29,7 @@ def get_snow_report():
     currently = tree.xpath('/html/body/div[1]/div[2]/div[1]/div[1]/div[2]/div[6]/div/text()')[0]
     condition_description = tree.xpath('/html/body/div[1]/div[2]/div[2]/div[3]/p[3]/text()')[0]
     last_updated = tree.xpath('/html/body/div[1]/div[2]/div[2]/div[3]/p[1]/text()')[0]
+    current_weather = tree.xpath('/html/body/div[1]/header/div[2]/div/div[1]/text()')[0]
     polled_at = datetime.datetime.now()
 
     trail_list = {
@@ -75,7 +76,8 @@ def get_snow_report():
         if status == "Open":
 
             print "\n###\n# Alpine Valley Ski Report Snow Report\n###" 
-            print "Data retrieved at %s" % polled_at           
+            print "Data retrieved at %s" % polled_at
+            print "Current Weather: %s" % current_weather
             print "Status: %s" % status
             print "Hours: %s" % hours
             print "Trail Status: %s of 20" % trail_status
@@ -112,6 +114,7 @@ def get_snow_report():
             'trail_list': trail_list,
             'lift_list': lift_list,
             'polled_at': polled_at,
+            'current_weather': current_weather,
         }
 
 get_snow_report()
